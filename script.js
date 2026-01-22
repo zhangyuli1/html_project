@@ -1,17 +1,5 @@
-﻿// 导航项交互效果
-document.querySelectorAll('.nav-item').forEach(item => {
-    item.addEventListener('click', function() {
-        // 移除所有active类
-        document.querySelectorAll('.nav-item').forEach(nav => {
-            nav.classList.remove('active');
-        });
-        // 为当前点击的项添加active类
-        this.classList.add('active');
-    });
-});
-
-// 搜索功能
-document.querySelector('.search-btn').addEventListener('click', function() {
+﻿// 搜索功能
+document.querySelector('.search-btn')?.addEventListener('click', function() {
     const searchTerm = document.querySelector('.search-input').value;
     if (searchTerm.trim()) {
         alert(`Searching for: "${searchTerm}" - This would normally perform a site search.`);
@@ -20,14 +8,14 @@ document.querySelector('.search-btn').addEventListener('click', function() {
     }
 });
 
-document.querySelector('.search-input').addEventListener('keypress', function(e) {
+document.querySelector('.search-input')?.addEventListener('keypress', function(e) {
     if (e.key === 'Enter') {
         document.querySelector('.search-btn').click();
     }
 });
 
 // 视频按钮点击效果
-document.querySelector('.view-video-btn').addEventListener('click', function() {
+document.querySelector('.view-video-btn')?.addEventListener('click', function() {
     alert('This would open the meeting video player. In a real implementation, this could open a modal or redirect to a video page.');
 });
 

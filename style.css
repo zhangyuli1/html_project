@@ -143,10 +143,10 @@ body {
 }
 
 /* 导航项等宽设置 */
+/* 修改导航项为链接样式 */
 .nav-item {
-    flex: 1; /* 关键：每个导航项等宽 */
+    flex: 1;
     padding: 15px 10px;
-    cursor: pointer;
     transition: background 0.3s;
     position: relative;
     font-size: 14px;
@@ -158,6 +158,8 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
     min-width: 0;
+    text-decoration: none; /* 移除下划线 */
+    display: block; /* 确保链接可以填充整个区域 */
 }
 
 .nav-item:last-child {
@@ -588,4 +590,25 @@ body {
     .bottom-section {
         padding: 30px 0;
     }
+}
+
+/* 空内容区域样式 */
+.empty-content {
+    text-align: center;
+    padding: 80px 20px;
+    width: 100%;
+}
+
+.empty-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.empty-content p {
+    font-size: 18px;
+    color: #ccc;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
 }
