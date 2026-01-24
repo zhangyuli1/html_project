@@ -100,7 +100,7 @@ body {
 .main-nav {
     background-color: #111;
     padding: 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    height: 60px;
 }
 
 .nav-container {
@@ -130,6 +130,82 @@ body {
     display: block; /* 确保链接可以填充整个区域 */
 }
 
+/* --- 导航下拉框新增样式 --- */
+
+/* 让包含下拉的 nav-item 成为定位基准 */
+.nav-item.dropdown {
+    position: relative;
+    padding: 0; /* 清除父级 padding，由内部链接撑开 */
+    cursor: pointer;
+}
+
+/* 下拉菜单内部的链接样式，保持与普通 nav-item 一致 */
+.dropdown-link {
+    display: block;
+    padding: 15px 10px;
+    color: inherit;
+    text-decoration: none;
+    width: 100%;
+}
+
+/* 下拉菜单容器 */
+.dropdown-menu {
+    top: 100%; /* 紧贴导航栏底部 */
+    left: 0;
+    background-color: #1a1a1a; /* 稍浅的黑色背景 */
+    min-width: 200px;
+    height: 135px;
+    list-style: none;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    
+    /* 初始状态：隐藏且上移一点点 */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+/* 鼠标悬停在 dropdown 项时显示菜单 */
+.nav-item.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* 下拉菜单里的每一行 */
+.dropdown-menu li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dropdown-menu li:last-child {
+    border-bottom: none;
+}
+
+/* 下拉菜单里的链接 */
+.dropdown-menu li a {
+    display: block;
+    padding: 12px 20px;
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: left;
+    transition: background 0.2s, color 0.2s;
+}
+
+/* 悬停在下拉选项上 */
+.dropdown-menu li a:hover {
+    background-color: #8b0000;
+    color: #fff;
+}
+
+/* 小图标间距 */
+.fa-caret-down {
+    margin-left: 5px;
+    font-size: 12px;
+}
+
 .nav-item:last-child {
     border-right: none;
 }
@@ -141,6 +217,7 @@ body {
 
 .nav-item.active {
     color: #fff;
+    height: 60px;
     background-color: rgba(139, 0, 0, 0.3);
 }
 
