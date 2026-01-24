@@ -120,12 +120,14 @@ body {
     font-size: 14px;
     font-weight: 600;
     color: #ccc;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
     border-right: 1px solid rgba(255, 255, 255, 0.1);
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     min-width: 0;
+    height: 60px;
     text-decoration: none; /* 移除下划线 */
     display: block; /* 确保链接可以填充整个区域 */
 }
@@ -133,9 +135,23 @@ body {
 /* --- 导航下拉框新增样式 --- */
 
 /* 让包含下拉的 nav-item 成为定位基准 */
-.nav-item.dropdown {
+.dropdown {
+    flex: 1;
+    padding: 15px 10px;
+    transition: background 0.3s;
     position: relative;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ccc;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+    text-decoration: none; /* 移除下划线 */
+    display: block; /* 确保链接可以填充整个区域 */
     padding: 0; /* 清除父级 padding，由内部链接撑开 */
+    height: 180px;
     cursor: pointer;
 }
 
@@ -168,7 +184,7 @@ body {
 }
 
 /* 鼠标悬停在 dropdown 项时显示菜单 */
-.nav-item.dropdown:hover .dropdown-menu {
+.dropdown:hover .dropdown-menu {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
