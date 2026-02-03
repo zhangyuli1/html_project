@@ -22,12 +22,11 @@ body {
 }
 
 .top-container {
-    max-width: 1200px;
+    max-width: 900px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
 }
 
 .logo-section {
@@ -63,7 +62,7 @@ body {
 }
 
 .nav-container {
-    max-width: 1200px;
+    max-width: 900px;
     margin: 0 auto;
     display: flex;
     padding: 0;
@@ -312,7 +311,7 @@ body {
 }
 
 .banner-container {
-    max-width: 1300px;
+    max-width: 900px;
     width: 100%;
     margin: 0 auto;
     padding: 0 20px;
@@ -321,7 +320,6 @@ body {
 .banner-content {
     display: flex;
     flex-wrap: wrap;
-    margin-left: 5%;
     gap: 60px;
 }
 
@@ -329,7 +327,6 @@ body {
 .left-content {
     flex: 1;
     min-width: 300px;
-    max-width: 600px;
     text-align: left;
 }
 
