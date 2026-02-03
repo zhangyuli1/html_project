@@ -378,87 +378,12 @@ body {
     margin-bottom: 25px;
 }
 
-.penn-text {
-    font-size: 22px;
-    font-weight: 700;
-    color: #fff;
-    letter-spacing: 1px;
-    margin-bottom: 5px;
-}
-
 .abramson-text {
     font-size: 18px;
     font-weight: 600;
     color: #ccc;
     letter-spacing: 0.5px;
     margin-bottom: 12px;
-}
-
-.page-title {
-    font-size: 42px;
-    font-weight: 700;
-    margin-bottom: 15px;
-    line-height: 1.2;
-    color: #fff;
-}
-
-.page-title .highlight {
-    color: #00cc99;
-    font-weight: 900;
-    display: block;
-    font-size: 44px;
-    margin-top: 5px;
-}
-
-.update-badge {
-    display: inline-block;
-    background-color: #ffcc00;
-    color: #000;
-    padding: 8px 20px;
-    border-radius: 4px;
-    font-size: 18px;
-    font-weight: 700;
-    margin-top: 10px;
-}
-
-.conference-info {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 8px;
-    padding: 30px;
-    border-left: 5px solid #8b0000;
-}
-
-.conference-title {
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 10px;
-    color: #ffcc00;
-    letter-spacing: 1px;
-}
-
-.conference-subtitle {
-    font-size: 32px;
-    font-weight: 900;
-    color: #fff;
-    margin-bottom: 5px;
-    letter-spacing: 1px;
-    line-height: 1.1;
-}
-
-.conference-date {
-    font-size: 28px;
-    font-weight: 900;
-    color: #8b0000;
-    margin-top: 25px;
-    letter-spacing: 1px;
-}
-
-/* 右侧内容区域 */
-.image {
-  float: right;
-  width: 40%;
-  max-width: 100%;
-  height: auto;
 }
 
 /* 空内容区域样式 */
