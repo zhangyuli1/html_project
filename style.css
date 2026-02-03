@@ -37,10 +37,9 @@ body {
 }
 
 .logo_image {
-    font-size: 32px;
-    font-weight: 900;
-    color: #8b0000;
-    font-family: 'Georgia', serif;
+    width: 180px;
+    height: 60px;
+    object-fit: contain;
 }
 
 .school-name {
@@ -49,16 +48,10 @@ body {
 }
 
 .school-line-1 {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 700;
     letter-spacing: 0.5px;
-}
-
-.school-line-2 {
-    font-size: 11px;
-    font-weight: 400;
-    letter-spacing: 0.3px;
-    color: #ccc;
+    color: #fff;
 }
 
 .search-container {
@@ -96,10 +89,11 @@ body {
     background: #a30000;
 }
 
-/* 主导航 - 等宽布局 */
+/* 主导航 */
 .main-nav {
     background-color: #111;
     padding: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     height: 60px;
 }
 
@@ -282,13 +276,73 @@ body {
     background-color: #8b0000;
 }
 
+/* 居中的人物图片容器 - 关键修复 */
+.centered-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+    margin-bottom: 30px;
+}
+
+.image-wrapper {
+    position: relative;
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+}
+
+.centered-main-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 
+        0 0 40px rgba(0, 102, 204, 0.3),  /* 蓝色光晕，匹配图片的蓝色人体轮廓 */
+        0 0 60px rgba(0, 255, 157, 0.2),  /* 绿色光晕，匹配图片的绿色神经网络 */
+        0 0 80px rgba(255, 215, 0, 0.1);  /* 金色光晕，匹配图片背景的金色光源 */
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    display: block;
+    margin: 0 auto;
+}
+
+.image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, 
+        rgba(0, 0, 0, 0.8) 0%, 
+        rgba(0, 0, 0, 0.4) 50%, 
+        transparent 100%);
+    padding: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.image-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 5px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.image-subtitle {
+    font-size: 16px;
+    color: #00ff9d; /* 绿色，匹配图片中的绿色神经网络 */
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
 /* 主横幅区域 */
 .main-banner {
     min-height: 600px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 40px 0;
+    padding: 0 0 40px 0;
     background: rgba(0, 0, 0, 0.7);
 }
 
@@ -338,6 +392,7 @@ body {
     font-weight: 600;
     color: #ccc;
     letter-spacing: 0.5px;
+    margin-bottom: 12px;
 }
 
 .page-title {
