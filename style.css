@@ -386,6 +386,28 @@ body {
     margin-bottom: 12px;
 }
 
+/* 底部横幅 */
+.footer-banner {
+    padding: 15px 0;
+    /* border-top: 1px solid #444; */
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.footer-text {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
 /* 空内容区域样式 */
 .empty-content {
     text-align: center;
