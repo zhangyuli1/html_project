@@ -8,7 +8,7 @@
 body {
     font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
     overflow-x: hidden;
-    border: 2px solid blue;
+    border: 0px solid blue;
     width: 100%;
     height: auto;
 }
@@ -19,7 +19,7 @@ body {
     background-color: #000;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding: 15px 0;
-    border: 2px solid green;
+    border: 0px solid green;
 }
 
 .top-container {
@@ -28,7 +28,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 2px solid gray;
+    border: 0px solid gray;
 }
 
 .logo-section {
@@ -61,7 +61,7 @@ body {
     padding: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     height: 60px;
-    border: 2px solid yellow;
+    border: 0px solid yellow;
 }
 
 .nav-container {
@@ -70,7 +70,7 @@ body {
     display: flex;
     padding: 0;
     width: 100%;
-    border: 2px solid red;
+    border: 0px solid red;
 }
 
 /* 导航项等宽设置 */
@@ -220,7 +220,7 @@ body {
     margin: 0 auto;
     padding: 0 20px;
     background: white;
-    border: 2px solid orange;
+    border: 0px solid orange;
 }
 
 /* 居中的人物图片容器 */
@@ -228,7 +228,7 @@ body {
     width: 100%;
     padding: 10px 0;
     margin-bottom: 10px;
-    border: 2px solid blueviolet;
+    border: 0px solid blueviolet;
 }
 
 .banner-content {
@@ -255,7 +255,7 @@ body {
     height: 60px;
     background-color: #000;
     padding: 15px 0;
-    border: 2px solid red;
+    border: 0px solid red;
     /* border-top: 1px solid #444; */
 }
 
@@ -264,7 +264,7 @@ body {
   float: right;
   margin-right: 300px;
   padding: 0 20px;
-  border: 2px solid yellow;
+  border: 0px solid yellow;
 }
 
 .footer-text {
