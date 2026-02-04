@@ -222,7 +222,7 @@ body {
 
 /* 主横幅区域 */
 .main-banner {
-    min-height: 600px;
+    min-height: 680px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -270,7 +270,10 @@ body {
 
 /* 底部横幅 */
 .footer-banner {
+    width: 100%;
+    height: 60px;
     padding: 15px 0;
+    border: 2px solid red;
     /* border-top: 1px solid #444; */
 }
 
