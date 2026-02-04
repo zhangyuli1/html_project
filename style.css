@@ -335,3 +335,98 @@ body {
     letter-spacing: 0.5px;     /* 字母间距：0.5像素（字母更分散） */
     text-align: left;        /* 文本对齐：居中 */
 }
+
+/*for contact*/
+.contact-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #666;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+/* 布局控制 */
+.contact-content {
+    display: flex;
+    gap: 30px; /* 左右间距 */
+    align-items: flex-start;
+}
+
+/* 左侧地图 */
+.map-container {
+    flex: 1;
+    min-width: 300px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* 右侧表单 */
+.form-container {
+    flex: 1;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* 表单首行分两列 */
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-row input {
+    flex: 1;
+}
+
+/* 输入框通用样式 */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    font-size: 16px;
+    box-sizing: border-box; /* 确保padding不撑破宽度 */
+    outline-color: #00205b;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* 提交按钮 */
+.submit-btn {
+    background-color: #00205b; /* 对应图片中的深蓝色 */
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 2px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    width: fit-content;
+    transition: background 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #003a8c;
+}
+
+/* 响应式适配：手机端垂直排列 */
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+    }
+    
+    .form-row {
+        flex-direction: column;
+    }
+}
