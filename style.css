@@ -294,6 +294,7 @@ body {
     color: black;            /* 颜色：深灰色 */
     line-height: 1.3;          /* 行高：1.3倍字体高度 */
     margin-bottom: 20px;       /* 底部外边距：20像素 */
+    margin-top: 20px;
     letter-spacing: 0.5px;     /* 字母间距：0.5像素（字母更分散） */
     font-family: 'Helvetica Neue', Arial, sans-serif; /* 字体家族 */
     text-align: left;        /* 文本对齐：居中 */
@@ -305,7 +306,32 @@ body {
     color: black;            /* 颜色：深灰色 */
     line-height: 1.3;          /* 行高：1.3倍字体高度 */
     margin-left: 0;
-    margin-bottom: 20px;       /* 底部外边距：20像素 */
+    margin-bottom: 5px;       /* 底部外边距：20像素 */
+    letter-spacing: 0.5px;     /* 字母间距：0.5像素（字母更分散） */
+    text-align: left;        /* 文本对齐：居中 */
+}
+
+/*for Scheduled Speakers*/
+.gray_class {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.white_class {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.sche_cont {
+    font-size: 1.125rem;
+    color: black;            /* 颜色：深灰色 */
+    line-height: 1.3;          /* 行高：1.3倍字体高度 */
+    margin-left: 0;
+    margin-bottom: 5px;       /* 底部外边距：20像素 */
     letter-spacing: 0.5px;     /* 字母间距：0.5像素（字母更分散） */
     text-align: left;        /* 文本对齐：居中 */
 }
