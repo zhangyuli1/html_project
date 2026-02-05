@@ -292,18 +292,18 @@ body {
 .content-p {
     font-size: 24px;           /* 字体大小：24像素 */
     font-weight: 600;          /* 字重：600（中等粗） */
-    color: black;            /* 颜色：深灰色 */
-    line-height: 1.3;          /* 行高：1.3倍字体高度 */
+    color: #0A509E;            /* 颜色： */
+    line-height: 1.25 !important;          /* 行高 */
     margin-bottom: 20px;       /* 底部外边距：20像素 */
     padding-top: 20px;
     letter-spacing: 0.5px;     /* 字母间距：0.5像素（字母更分散） */
-    font-family: 'Helvetica Neue', Arial, sans-serif; /* 字体家族 */
+    font-family: 'CopernicusMedium', serif; /* 字体家族 */
     text-align: left;        /* 文本对齐：居中 */
 }
 
 .program-text {
     font-size: 1.125rem;
-    padding-bottom: 1.5rem;
+    padding-top: 20px;
     color: black;            /* 颜色：深灰色 */
     line-height: 1.3;          /* 行高：1.3倍字体高度 */
     margin-left: 0;
