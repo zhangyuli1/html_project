@@ -345,8 +345,11 @@ body {
 
 .title {
     text-align: center;
-    font-size: 1.5rem;
-    color: #666;
+    font-size: 24px;
+    font-weight: 600;
+    color: #0A509E;
+    line-height: 1.25 !important;
+    font-family: 'CopernicusMedium', serif;
     margin-bottom: 40px;
     padding-top:30px;
     letter-spacing: 1px;
