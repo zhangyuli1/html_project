@@ -219,7 +219,7 @@ body {
     width: 900px;
     min-height: 1000px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 25px;
     background: white;
     border: 0px solid orange;
 }
@@ -592,4 +592,14 @@ textarea {
 .modern-schedule td:nth-child(2) {
     width: 240px;
     font-weight: 500;
+}
+
+/* 定义一个自定义链接样式的类 */
+.no-default-link {
+  text-decoration: none;
+  color: white; /* 设置为深灰色 */
+}
+
+.no-default-link:hover {
+  color: #0077cc; /* 悬停时变为蓝色 */
 }
