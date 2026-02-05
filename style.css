@@ -345,9 +345,10 @@ body {
 
 .title {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     color: #666;
     margin-bottom: 40px;
+    padding-top:30px;
     letter-spacing: 1px;
 }
 
@@ -440,4 +441,79 @@ textarea {
     margin-top: 20px;
     margin-bottom: 40px;
     margin-left: 20px;
+}
+
+/*for schedule*/
+/* 日程表容器 */
+.schedule-container {
+    max-width: 1100px;
+    margin: 30px 0 auto; /* 与上方表单保持间距 */
+    padding: 30px 20px;
+}
+
+.schedule-title {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* 表格样式 */
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse; /* 合并边框 */
+    background-color: #fff;
+    font-size: 15px;
+}
+
+.schedule-table th, 
+.schedule-table td {
+    border: 1px solid #ccc;
+    padding: 12px 15px;
+    text-align: center;
+    vertical-align: middle; /* 确保垂直方向也居中 */
+    font-weight: normal;
+}
+
+/* 蓝色/灰色标题行样式 */
+.section-header th {
+    background-color: #f8f9fa;
+    text-align: center;
+    font-size: 15px;
+}
+
+/* 时间列宽度固定 */
+.time {
+    width: 180px;
+    white-space: nowrap;
+    color: #444;
+}
+
+/* 休息时间行 */
+.break-row {
+    background-color: #fff;
+    text-align: center;
+}
+
+.break-row td:last-child {
+    text-align: center;
+}
+
+/* 论文题目弱化显示 */
+.paper-title {
+    color: #777;
+    font-size: 14px;
+    display: inline-block;
+    margin-top: 4px;
+}
+
+/* 移动端优化 */
+@media (max-width: 600px) {
+    .time {
+        width: 100px;
+        font-size: 13px;
+    }
+    .schedule-table td {
+        padding: 8px;
+        font-size: 13px;
+    }
 }
