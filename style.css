@@ -6,174 +6,128 @@
 }
 
 body {
-    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-    overflow-x: hidden;
-    border: 0px solid blue;
-    width: 100%;
-    height: auto;
+    font-family: 'Segoe UI', Arial, sans-serif;
     background: rgb(236, 238, 241);
+    color: #333;
 }
 
+/* 核心容器自适应 */
+.top-container, 
+.nav-container, 
+.main-banner,
+.contact-container,
+.schedule-container {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* 图片自适应 */
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
 
 /* 顶部栏 */
 .top-bar {
     background-color: #000;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 15px 0;
-    border: 0px solid green;
-}
-
-.top-container {
-    max-width: 900px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 0px solid gray;
+    padding: 15px 10px;
 }
 
 .logo-section {
     display: flex;
     align-items: center;
     gap: 15px;
+    flex-wrap: wrap; /* 手机端标题换行 */
 }
 
 .logo_image {
     width: 180px;
-    height: 60px;
-    object-fit: contain;
-}
-
-.school-name {
-    display: flex;
-    flex-direction: column;
+    height: auto;
 }
 
 .school-line-1 {
     font-size: 16px;
     font-weight: 700;
-    letter-spacing: 0.5px;
     color: #fff;
-    font-family: 'CopernicusMedium', serif;
 }
 
-/* 主导航 */
+/* 主导航响应式 */
 .main-nav {
     background-color: #111;
-    padding: 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    height: 60px;
-    border: 0px solid yellow;
+    min-height: 60px;
 }
 
 .nav-container {
-    max-width: 900px;
-    margin: 0 auto;
     display: flex;
-    padding: 0;
-    width: 100%;
-    border: 0px solid red;
+    flex-wrap: wrap; /* 允许导航项在小屏幕换行 */
 }
 
-/* 导航项等宽设置 */
-.nav-item {
+.nav-item, .dropdown {
     flex: 1;
-    padding: 15px 10px;
-    transition: background 0.3s;
-    position: relative;
+    min-width: 100px; /* 保证手机端点击空间 */
+    text-align: center;
+    color: #ccc;
+    text-decoration: none;
     font-size: 14px;
     font-weight: 600;
-    color: #ccc;
-    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 18px 5px;
     border-right: 1px solid rgba(255, 255, 255, 0.1);
-    text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    min-width: 0;
-    height: 60px;
-    text-decoration: none; /* 移除下划线 */
-    display: block; /* 确保链接可以填充整个区域 */
 }
 
-/* --- 导航下拉框新增样式 --- */
-
-/* 让包含下拉的 nav-item 成为定位基准 */
 .dropdown {
-    flex: 1;
-    padding: 15px 10px;
-    transition: background 0.3s;
-    font-size: 14px;
-    font-weight: 600;
-    color: #ccc;
-    text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    min-width: 0;
-    text-decoration: none; /* 移除下划线 */
-    display: block; /* 确保链接可以填充整个区域 */
-    padding: 0; /* 清除父级 padding，由内部链接撑开 */
-    cursor: pointer;
+    padding: 0;
+    position: relative;
 }
 
 /* 下拉菜单内部的链接样式，保持与普通 nav-item 一致 */
 .dropdown-link {
-    display: block;
-    padding: 15px 10px;
-    color: inherit;
-    text-decoration: none;
-    width: 100%;
-    height: 60px;
+    padding: 18px 5px;
+    height: 100%;
+    cursor: pointer;
 }
 
 /* 下拉菜单容器 */
 .dropdown-menu {
-    top: 100%; /* 紧贴导航栏底部 */
+    position: absolute;
+    top: 100%;
     left: 0;
-    background-color: #1a1a1a; /* 稍浅的黑色背景 */
-    height: 90px;
+    width: 100%;
+    background: #1a1a1a;
     list-style: none;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    display: none; /* 默认隐藏 */
     z-index: 1000;
-    
-    /* 初始状态：隐藏且上移一点点 */
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
-    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    border: 0px solid rebeccapurple;
 }
 
 /* 鼠标悬停在 dropdown 项时显示菜单 */
 .dropdown:hover .dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+    display: block;
 }
 
 /* 下拉菜单里的每一行 */
 .dropdown-menu li {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.dropdown-menu li:last-child {
-    border-bottom: none;
+    border: 0px solid blue;
 }
 
 /* 下拉菜单里的链接 */
 .dropdown-menu li a {
     display: block;
-    padding: 12px 20px;
+    padding: 15px;
+    height: 54px;
+    border: 0px solid yellow;
     color: #ccc;
     text-decoration: none;
-    font-size: 14px;
-    transition: background 0.2s, color 0.2s;
+    text-align: center;
+    border-bottom: 1px solid #333;
 }
 
 /* 悬停在下拉选项上 */
 .dropdown-menu li a:hover {
-    background-color: #8b0000;
+    border: 0px solid red;
+    background-color: rgba(139, 0, 0, 0.3);
     color: #fff;
 }
 
@@ -198,9 +152,13 @@ body {
     background-color: rgba(139, 0, 0, 0.3);
 }
 
+.nav-item:hover {
+    background-color: rgba(139, 0, 0, 0.3);
+}
+
 .dropdown-link:hover {
     color: #fff;
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(139, 0, 0, 0.3);
 }
 
 .dropdown-link.active {
@@ -215,14 +173,10 @@ body {
     background-color: rgba(139, 0, 0, 0.3);
 }
 
-/* 主横幅区域 */
+/* 内容区域 */
 .main-banner {
-    width: 900px;
-    min-height: 1000px;
-    margin: 0 auto;
-    padding: 0 25px;
     background: white;
-    border: 0px solid orange;
+    padding: 20px;
 }
 
 /* 居中的人物图片容器 */
@@ -245,43 +199,37 @@ body {
 }
 
 .left-content h3 {
-    font-size: 20px; 
     color: #0A509E;
-    font-family: 'CopernicusMedium', serif; /* 字体家族 */
-    line-height: 2em;
+    line-height: 1.6;
+    margin-bottom: 10px;
 }
 
 .abramson-text {
-    font-size: 18px;
-    font-weight: 600;
-    color: black;
-    letter-spacing: 0.5px;
-    margin-bottom: 25px;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
 }
 
-/* 底部横幅 */
+/* 底部 */
 .footer-banner {
     width: 100%;
     height: 60px;
-    background-color: #000;
-    padding: 15px 0;
-    border: 0px solid red;
-    /* border-top: 1px solid #444; */
+    background: #000;
+    padding: 20px;
+    text-align: center;
 }
 
 .footer-container {
-  max-width: 1200px;
+  max-width: 900px;
   float: right;
-  margin-right: 30%;
+  margin-right: 25%;
   padding: 0 20px;
   border: 0px solid yellow;
 }
 
 .footer-text {
-    color: #ffffff;
+    color: #fff;
     font-size: 14px;
-    font-weight: 400;
-    letter-spacing: 0.5px;
 }
 
 /* 空内容区域样式 */
@@ -436,12 +384,37 @@ textarea {
 
 /* 响应式适配：手机端垂直排列 */
 @media (max-width: 768px) {
-    .contact-content {
+        .contact-content {
         flex-direction: column;
     }
     
     .form-row {
         flex-direction: column;
+    }
+
+    .nav-item, .dropdown {
+        flex: 1 1 33.33%; /* 手机上一行显示三个 */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+
+    
+    .logo_image {
+        width: 140px;
+    }
+    
+    .school-line-1 {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-item, .dropdown {
+        flex: 1 1 50%; /* 极窄屏幕一行两个 */
+    }
+    
+    .left-content h3 {
+        font-size: 18px;
     }
 }
 
@@ -510,7 +483,6 @@ textarea {
     text-align: center;
 }
 
-/* 论文题目弱化显示 */
 .paper-title {
     color: #777;
     font-size: 14px;
@@ -530,6 +502,12 @@ textarea {
     }
 }
 
+/* 表格响应式包装器 */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto; /* 屏幕太小时允许左右滑动查看表格 */
+    margin-top: 20px;
+}
 
 /* for 2024 */
 .schedule-section {
