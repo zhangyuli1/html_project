@@ -182,7 +182,6 @@ body {
 /* 居中的人物图片容器 */
 .centered-image-container {
     width: 100%;
-    padding: 10px 0;
     margin-bottom: 10px;
     border: 0px solid blueviolet;
 }
@@ -220,9 +219,8 @@ body {
 }
 
 .footer-container {
-  max-width: 900px;
-  float: right;
-  margin-right: 25%;
+  max-width: 90%;
+  margin-left: 25%;
   padding: 0 20px;
   border: 0px solid yellow;
 }
@@ -420,12 +418,9 @@ textarea {
 
 /* for sponsors */
 .sponsor_img {
-    width: 500px;
-    height: 160px;
-    height: auto;
+    width: 40%;
     margin-top: 20px;
     margin-bottom: 40px;
-    margin-left: 20px;
 }
 
 /*for schedule*/
