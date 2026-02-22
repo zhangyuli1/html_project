@@ -15,9 +15,8 @@ body {
 .top-container, 
 .nav-container, 
 .main-banner,
-.contact-container,
 .schedule-container {
-    max-width: 900px;
+    max-width: 908px;
     width: 100%;
     margin: 0 auto;
 }
@@ -40,7 +39,7 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 15px;
-    max-width: 850px;
+    max-width: 860px;
     flex-wrap: wrap; /* 手机端标题换行 */
 }
 
@@ -50,8 +49,8 @@ body {
 }
 
 .school-name {
-    font-size: 18px;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: 400;
     color: #FFD778;
     text-align: right;
     border: 0px solid red;
@@ -74,8 +73,8 @@ body {
     text-align: center;
     color: #ccc;
     text-decoration: none;
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 400;
     padding: 18px 5px;
     border-top: 1px solid gray;
     border-bottom: 1px solid gray;
@@ -250,7 +249,7 @@ body {
 /* 标题样式 */
 .content-p {
     font-size: 24px;           /* 字体大小：24像素 */
-    font-weight: 600;          /* 字重：600（中等粗） */
+    font-weight: 400;          /* 字重：600（中等粗） */
     color: #0A509E;            /* 颜色： */
     line-height: 1.25 !important;          /* 行高 */
     margin-bottom: 20px;       /* 底部外边距：20像素 */
@@ -293,15 +292,10 @@ body {
     text-align: left;        /* 文本对齐：居中 */
 }
 
-/*for contact*/
-.contact-container {
-    margin: 0 auto;
-}
-
 .title {
     text-align: center;
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 400;
     color: #0A509E;
     line-height: 1.25 !important;
     font-family: "Fira Sans", sans-serif;
@@ -371,7 +365,7 @@ textarea {
     border: none;
     border-radius: 2px;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 400;
     cursor: pointer;
     width: fit-content;
     transition: background 0.3s;
@@ -427,7 +421,7 @@ textarea {
 /*for schedule*/
 /* 日程表容器 */
 .schedule-container {
-    max-width: 900px;
+    max-width: 908px;
     margin: 30px 0 auto; /* 与上方表单保持间距 */
     padding: 30px 30px;
 }
@@ -507,7 +501,7 @@ textarea {
 
 /* for 2024 */
 .schedule-section {
-    max-width: 900px;
+    max-width: 908px;
     margin: 0 auto;
     font-family: "Fira Sans", sans-serif;
     padding-bottom: 30px;
@@ -525,7 +519,7 @@ textarea {
     background-color: #7a7a7a;
     color: white;
     padding: 15px;
-    font-weight: bold;
+    font-weight: 400;
     text-align: center; /* 居中 */
     letter-spacing: 1px;
 }
@@ -577,7 +571,7 @@ textarea {
 .modern-schedule td:first-child,
 .modern-schedule td:nth-child(2) {
     width: 240px;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 /* 定义一个自定义链接样式的类 */
