@@ -133,8 +133,7 @@ body {
 /* 悬停在下拉选项上 */
 .dropdown-menu li a:hover {
     border: 0px solid red;
-    background-color: rgba(139, 0, 0, 0.3);
-    color: #fff;
+    color: #42dcf4;
 }
 
 /* 小图标间距 */
@@ -153,30 +152,27 @@ body {
 }
 
 .nav-item.active {
-    color: #fff;
+    color: #42dcf4;
     height: auto;
-    background-color: rgba(139, 0, 0, 0.3);
 }
 
 .nav-item:hover {
-    background-color: rgba(139, 0, 0, 0.3);
+    color: #42dcf4;
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
 .dropdown-link:hover {
-    color: #fff;
-    background-color: rgba(139, 0, 0, 0.3);
+    color: #42dcf4;
 }
 
 .dropdown-link.active {
-    color: #fff;
+    color: #42dcf4;
     height: 60px;
-    background-color: rgba(139, 0, 0, 0.3);
 }
 
 .dropdown.active {
     color: #fff;
     height: 60px;
-    background-color: rgba(139, 0, 0, 0.3);
 }
 
 /* 内容区域 */
