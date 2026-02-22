@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: 'CopernicusMedium', serif;
     background: rgb(236, 238, 241);
     color: #333;
 }
@@ -508,7 +508,7 @@ textarea {
 .schedule-section {
     max-width: 1100px;
     margin: 0 auto;
-    font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-family: 'CopernicusMedium', serif;
     padding-bottom: 30px;
 }
 
