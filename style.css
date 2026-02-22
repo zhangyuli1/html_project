@@ -40,6 +40,7 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 15px;
+    max-width: 850px;
     flex-wrap: wrap; /* 手机端标题换行 */
 }
 
@@ -49,7 +50,7 @@ body {
 }
 
 .school-name {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
     color: #FFD778;
     text-align: right;
@@ -73,7 +74,7 @@ body {
     text-align: center;
     color: #ccc;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 600;
     padding: 18px 5px;
     border-right: 1px solid rgba(255, 255, 255, 0.1);
@@ -119,7 +120,7 @@ body {
 .dropdown-menu li a {
     display: block;
     padding: 15px;
-    height: 54px;
+    height: auto;
     border: 0px solid yellow;
     color: #ccc;
     text-decoration: none;
@@ -151,7 +152,7 @@ body {
 
 .nav-item.active {
     color: #fff;
-    height: 60px;
+    height: auto;
     background-color: rgba(139, 0, 0, 0.3);
 }
 
