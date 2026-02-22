@@ -77,6 +77,8 @@ body {
     font-size: 18px;
     font-weight: 600;
     padding: 18px 5px;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
     border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -180,6 +182,7 @@ body {
 /* 内容区域 */
 .main-banner {
     background: white;
+    min-height: 1024px;
 }
 
 /* 居中的人物图片容器 */
