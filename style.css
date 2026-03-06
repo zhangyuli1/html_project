@@ -9,6 +9,7 @@ body {
     font-family: "Fira Sans", sans-serif;
     background: rgb(236, 238, 241);
     color: #333;
+    overflow-x: hidden; /* 防止移动端左右晃动 */
 }
 
 /* 核心容器自适应 */
@@ -33,7 +34,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 860px;
     flex-wrap: wrap; /* 手机端标题换行 */
 }
 
@@ -54,6 +54,9 @@ body {
 .main-nav {
     background-color: #111;
     min-height: 60px;
+    position: sticky; /* 滚动时固定导航（可选） */
+    top: 0;
+    z-index: 1001;
 }
 
 .nav-container {
@@ -63,7 +66,7 @@ body {
 
 .nav-item, .dropdown {
     flex: 1;
-    min-width: 100px; /* 保证手机端点击空间 */
+    min-width: 80px; 
     text-align: center;
     color: #ccc;
     text-decoration: none;
@@ -98,7 +101,7 @@ body {
     display: none; /* 默认隐藏 */
     z-index: 1000;
     box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-    border: 0px solid rebeccapurple;
+ border: 0px solid rebeccapurple;
 }
 
 /* 鼠标悬停在 dropdown 项时显示菜单 */
@@ -175,14 +178,15 @@ body {
 }
 
 .hero-container {
-    position: relative; /* 允许子元素定位 */
-    overflow: hidden;
+    position: relative;
+    background-color: #000;
 }
 
 .hero-bg {
     width: 100%;
+    height: auto;
     display: block;
-    filter: brightness(0.8); /* 稍微调暗背景确保文字清晰 */
+    filter: brightness(0.7); /* 移动端背景稍微再暗一点，增加对比度 */
 }
 
 .hero-overlay {
@@ -193,40 +197,40 @@ body {
     height: 100%;
     display: flex;
     align-items: center; /* 垂直居中 */
-    padding-left: 60px; /* 文字靠左对齐 */
+    padding-left: 7%; /* 使用百分比 padding 适配不同屏幕 */
 }
 
 .hero-content {
     color: white;
-    max-width: 600px;
+    max-width: 80%;
 }
 
 .hero-title {
-    font-size: 40px;
+    font-size: clamp(1.5rem, 5vw, 2.5rem); /* 字体大小随屏幕缩放，最小1.5rem，最大2.5rem */
     font-weight: 600;
     line-height: 1.2;
-    margin-bottom: 55px;
+    margin-bottom: 12%;
     letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .hero-subtitle {
-    font-size: 23px;
+    font-size: clamp(0.9rem, 2.5vw, 1.4rem);
     line-height: 1.4;
-    margin-bottom: 40px;
-    font-weight: 300;
+    margin-bottom: 12%;
+    font-weight: 400;
 }
 
 .hero-btn {
     display: inline-block;
-    background-color: #7ef9ff; /* 图片中的亮青色 */
+    background-color: #7ef9ff;
     color: #000;
     text-decoration: none;
-    padding: 7px 15px;
+    padding: 10px 15px;
     border-radius: 8px;
-    font-weight: 750;
-    font-size: 23px;
-    margin-left: 80px;
-    margin-top: 20px;
+    font-weight: 850;
+    font-size: clamp(0.9rem, 2.5vw, 1.4rem);
+    margin-left: 20%;
     transition: 0.3s ease;
 }
 
@@ -434,39 +438,65 @@ textarea {
     background-color: #003a8c;
 }
 
-/* 响应式适配：手机端垂直排列 */
+/* --- 媒体查询：移动端适配逻辑 --- */
+
+/* 平板及以下 (768px) */
 @media (max-width: 768px) {
-        .contact-content {
+    .contact-content {
         flex-direction: column;
     }
-    
+  
     .form-row {
         flex-direction: column;
     }
 
-    .nav-item, .dropdown {
-        flex: 1 1 33.33%; /* 手机上一行显示三个 */
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    .logo-section {
+        flex-direction: column;
+        text-align: center;
     }
     
+    .school-name {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 16px;
+    }
 
-    
-    .logo_image {
-        width: 140px;
+    .nav-item, .dropdown {
+        flex: 1 1 33.33%; /* 导航变为两行，每行三个 */
+        font-size: 16px;
     }
-    
-    .school-line-1 {
-        font-size: 14px;
+
+    .hero-overlay {
+        padding-left: 25px; /* 减少侧边距 */
     }
 }
 
+/* 手机端 (480px) */
 @media (max-width: 480px) {
     .nav-item, .dropdown {
         flex: 1 1 50%; /* 极窄屏幕一行两个 */
     }
-    
+
     .left-content h3 {
         font-size: 18px;
+    }
+
+    .hero-title {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .hero-subtitle {
+        margin-bottom: 20px;
+        br { display: none; } /* 在超窄屏隐藏换行符，让文字自然排布 */
+    }
+
+    .hero-btn {
+        padding: 8px 15px;
+    }
+
+    .banner-content {
+        padding: 15px;
     }
 }
 
