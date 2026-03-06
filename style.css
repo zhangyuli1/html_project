@@ -14,18 +14,13 @@ body {
 /* 核心容器自适应 */
 .top-container, 
 .nav-container, 
+.hero-container,
+.index_main-banner,
 .main-banner,
 .schedule-container {
     max-width: 908px;
     width: 100%;
     margin: 0 auto;
-}
-
-/* 图片自适应 */
-.responsive-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
 }
 
 /* 顶部栏 */
@@ -38,7 +33,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 15px;
     max-width: 860px;
     flex-wrap: wrap; /* 手机端标题换行 */
 }
@@ -174,17 +168,82 @@ body {
     height: 60px;
 }
 
+/* --- 新增：Hero 区域样式 --- */
+.hero-section {
+    background-color: rgb(236, 238, 241);
+    width: 100%;
+}
+
+.hero-container {
+    position: relative; /* 允许子元素定位 */
+    overflow: hidden;
+}
+
+.hero-bg {
+    width: 100%;
+    display: block;
+    filter: brightness(0.8); /* 稍微调暗背景确保文字清晰 */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center; /* 垂直居中 */
+    padding-left: 60px; /* 文字靠左对齐 */
+}
+
+.hero-content {
+    color: white;
+    max-width: 600px;
+}
+
+.hero-title {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 55px;
+    letter-spacing: 1px;
+}
+
+.hero-subtitle {
+    font-size: 23px;
+    line-height: 1.4;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+.hero-btn {
+    display: inline-block;
+    background-color: #7ef9ff; /* 图片中的亮青色 */
+    color: #000;
+    text-decoration: none;
+    padding: 7px 15px;
+    border-radius: 8px;
+    font-weight: 750;
+    font-size: 23px;
+    margin-left: 80px;
+    margin-top: 20px;
+    transition: 0.3s ease;
+}
+
+.hero-btn:hover {
+    background-color: white;
+    transform: scale(1.05);
+}
+
 /* 内容区域 */
+.index_main-banner {
+    background: white;
+    min-height: 900px;
+}
+
 .main-banner {
     background: white;
     min-height: 1024px;
-}
-
-/* 居中的人物图片容器 */
-.centered-image-container {
-    width: 100%;
-    margin-bottom: 10px;
-    border: 0px solid blueviolet;
 }
 
 .banner-content {
