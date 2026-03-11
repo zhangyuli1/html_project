@@ -252,7 +252,7 @@ body {
 
 .banner-content {
     width: 100%;
-    padding: 20px 30px;
+    padding: 20px 30px 0px 30px;
 }
 
 /* 左侧内容区域 */
@@ -511,7 +511,7 @@ textarea {
 /* 日程表容器 */
 .schedule-container {
     max-width: 908px;
-    margin: 30px 0 auto; /* 与上方表单保持间距 */
+    margin: 0px 0 auto; /* 与上方表单保持间距 */
     padding: 30px 30px;
 }
 
@@ -661,6 +661,45 @@ textarea {
 .modern-schedule td:nth-child(2) {
     width: 240px;
     font-weight: 400;
+}
+
+/* 主题演讲嘉宾样式 */
+.speaker-section {
+    padding: 0px 30px 20px 30px;
+}
+
+.speaker-card {
+    padding-bottom: 30px;
+}
+
+.speaker-name {
+    font-size: 19px;
+    color: #007bff; /* 链接蓝色 */
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.speaker-title {
+    font-size: 17px;
+    color: #000;
+    line-height: 1.4;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.speaker-photo {
+    max-width: 500px; /* 根据图片实际大小调整 */
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .speaker-photo {
+        max-width: 100%;
+    }
 }
 
 /* 定义一个自定义链接样式的类 */
