@@ -512,7 +512,7 @@ textarea {
 .schedule-container {
     max-width: 908px;
     margin: 0px 0 auto; /* 与上方表单保持间距 */
-    padding: 30px 30px;
+    padding: 0px 30px 30px 30px;
 }
 
 .schedule-title {
