@@ -585,7 +585,7 @@ textarea {
 .table-responsive {
     width: 100%;
     overflow-x: auto; /* 屏幕太小时允许左右滑动查看表格 */
-    margin-top: 20px;
+    margin-top: 0px;
 }
 
 /* for 2024 */
