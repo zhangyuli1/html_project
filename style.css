@@ -636,6 +636,37 @@ textarea {
     background-color: #f9f9f9;
 }
 
+/* 表格内下拉框样式 */
+.table-select {
+    width: 100%;
+    padding: 8px 30px 8px 15px; /* 右侧留出空间给箭头，防止文字重叠 */
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: #f1f3f4;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+    font-size: 14px;
+    cursor: pointer;
+    
+    /* 核心省略号样式 */
+    white-space: nowrap;       /* 强制不换行 */
+    overflow: hidden;          /* 隐藏超出部分 */
+    text-overflow: ellipsis;   /* 显示省略号 */
+    
+    /* 针对不同浏览器的兼容性处理 */
+    appearance: none;          /* 移除原生样式以确保省略号生效 */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.table-select:focus {
+    outline: none;
+    border-color: #0A509E;
+    box-shadow: 0 0 5px rgba(10, 80, 158, 0.2);
+}
+
 
 /* 单位和链接样式 */
 .org {
